@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body{
+	background-color: #1266C5;
+	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	overflow-x: hidden;
+}
+.mobile-view{
+	display: none;
+}
+.label-info{
+	background-color: #FFD667;
+	width: 100%;
+	border-bottom-left-radius: 35px;
+	border-bottom-right-radius: 35px;
+	padding: 5px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.label-info-text{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 12px;
+
+}
+.logo-dakdok{
+	position: absolute;
+	width: 300px;
+	height: 110px;
+	top: 0px;
+}
+.btn-daftar-layanan{
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	width: 300px !important;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 18px;
+}
+.btn-dark{
+	background-color: #3F3F41;
+}
+.elipse{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #F8F8F8;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 10px;
+}
+.elipse-social-media{
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+	background: #F8F8F8;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 5px;
+}
+.icon-social-media{
+
+}
+@media (max-width: 768px) {
+	.web-view{
+		display: none;
+	}
+	.mobile-view{
+		display: block;
+	}
+	.label-info{
+		border-radius: 25px;
+		margin-top: 2px;
+	}
+	.logo-dakdok-mobile{
+		top: 0px;
+	}
+	.elipse{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #F8F8F8;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 5px;
+	}
+	.footer{
+		background-color: #FFD667;
+		width: 100%;
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+	}
+	.label-info-mobile{
+		padding: 5px;
+		background-color: transparent;
+	}
+	.card{
+		border: 0px;
+	}
+	.btn-daftar-layanan{
+		top: 35%;
+		width: unset;
+	}
+	
+}
