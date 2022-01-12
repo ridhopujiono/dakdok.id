@@ -49,11 +49,11 @@ class UserController extends Controller
                     'email' => 'The provided credentials do not match our records.',
                 ]);
             }
+        } else {
+            return back()->withErrors([
+                'email' => 'The provided credentials do not match our records.',
+            ]);
         }
-
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ]);
     }
 
     public function user(Request $request)
@@ -68,10 +68,12 @@ class UserController extends Controller
 
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json(["status" => "!ada"]);
-        }
-        $token = $user->createToken($request->device_name);
+        } else {
 
-        return response()->json(["status" => "success", "id" => $user->id, "name" => $user->name, "no_telp" => $user->no_telp, "token" => $token->plainTextToken]);
+            $token = $user->createToken($request->device_name);
+
+            return response()->json(["status" => "success", "id" => $user->id, "name" => $user->name, "no_telp" => $user->no_telp, "token" => $token->plainTextToken]);
+        }
     }
 
 
